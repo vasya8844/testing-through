@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2018_10_23_011222) do
 
   create_table "job_references", force: :cascade do |t|
     t.bigint "job_id"
+    t.integer "job_sourceable_id"
+    t.string "job_sourceable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["job_id"], name: "index_job_references_on_job_id"
@@ -41,5 +43,4 @@ ActiveRecord::Schema.define(version: 2018_10_23_011222) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "job_references", "jobs"
 end

@@ -43,4 +43,5 @@ ActiveRecord::Schema.define(version: 2018_10_23_011222) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "job_references", "jobs"
 end
